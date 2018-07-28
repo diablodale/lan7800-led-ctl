@@ -29,6 +29,13 @@
 #define REG_HW_CFG			(0x10)	/* hardware config register */
 /* bit 20-23: LED0-LED3 enable */
 #define REG_GPIO_CFG0			(0x18)
+/* bit 16-31 reserved
+   bit 12-15: GPIO0-3 enable; 1=LED, 0=GPIO
+	bit 12 = GPIOEN0, bit 13= GPIOEN1, bit 14=GPIOEN2
+   bit 8-11: GPIO0-3 buffer type, 1=push-pull, 0=open-drain
+   bit 4-7: GPIO0-3 direction, 1=output, 0=input
+   bit 0-3: GPIO0-3 data
+   */
 
 /* meaning of the (relevant) bits in the HW_CFG register */
 #define HW_CFG_LED0_EN	(1<<20)
