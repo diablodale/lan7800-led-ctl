@@ -21,16 +21,9 @@ tidy:
 	$(RM) src/*.o $(PROGS)
 
 install: $(PROGS)
-	@$(ECHO) "\t==> Installing programs to $(DESTDIR)/usr/bin"
-	@install -m 0755 -d $(DESTDIR)/usr/bin
-	@install -m 0755 -t $(DESTDIR)/usr/bin $(PROGS)
-
-pack:
-	@$(ECHO) "Cleaning up ..." ; \
-	$(RM) src/*.o $(PROGS)
-	@$(ECHO) "Creating package ..." ; \
-	cd .. ; \
-	tar c -J -f lan7800-led-ctl-$(GIT_VERSION).tar.xz lan7800-led-ctl
+	@$(ECHO) "\t==> Installing programs to $(DESTDIR)/bin"
+	@install -m 0755 -d $(DESTDIR)/bin
+	@install -m 0755 -t $(DESTDIR)/bin $(PROGS)
 
 # Generic instructions
 src/%.o: src/%.c
