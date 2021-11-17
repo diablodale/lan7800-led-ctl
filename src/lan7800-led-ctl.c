@@ -100,7 +100,7 @@ void about(void)
 {
 	printf("lan7800-led-ctl %s programmed by Dominic Radermacher\n", VERSION);
 	printf("For further info or latest version see\n");
-	printf("https://mockmoon-cybernetics.ch/computer/raspberry-pi/lan7800-led-ctl/\n");
+	printf("https://familie-radermacher.ch/dominic/computer/raspberry-pi/lan7800-led-ctl/\n");
 	exit(1);
 }
 
